@@ -37,8 +37,8 @@ export default {
           border: '#E3E0D7',
           onPrimaryContainer: '#613b00',
           inversePrimary: '#855300',
-          secondary: '#ffb77d',
-          onSecondary: '#4d2600',
+
+
           secondaryContainer: '#d97707',
           onSecondaryContainer: '#432100',
           tertiary: '#56e5a9',
