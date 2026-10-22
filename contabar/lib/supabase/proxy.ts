@@ -2,10 +2,33 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { hasEnvVars } from "../utils";
 
+/** Cookie que marca a sessão de demonstração (dados fictícios, sem login real). */
+export const COOKIE_DEMO = "contabar_demo";
+
+/** Páginas abertas a qualquer visitante, sem login. */
+const ROTAS_PUBLICAS = ["/demo", "/privacidade"];
+
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
     request,
   });
+
+  const caminho = request.nextUrl.pathname;
+
+  // Política de privacidade e entrada da demonstração: sempre públicas.
+  if (ROTAS_PUBLICAS.some((rota) => caminho === rota || caminho.startsWith(`${rota}/`))) {
+    return supabaseResponse;
+  }
+
+  // Modo demonstração: quem entrou por /demo navega pelas telas com dados
+  // fictícios, sem serviço de autenticação. Para desligar este atalho (por
+  // exemplo, em produção), defina CONTABAR_DEMO=off no ambiente.
+  if (
+    process.env.CONTABAR_DEMO !== "off" &&
+    request.cookies.get(COOKIE_DEMO)?.value === "1"
+  ) {
+    return supabaseResponse;
+  }
 
   // If the env vars are not set, skip proxy check. You can remove this
   // once you setup the project.
