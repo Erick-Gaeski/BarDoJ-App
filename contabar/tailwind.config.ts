@@ -29,6 +29,12 @@ export default {
           primary: '#245B4A',
           onPrimary: '#FFFFFF',
           primaryContainer: '#f59e0b',
+          // custom color tokens for new palette
+          foreground: '#262923',
+          secondary: '#5E665F',
+          accent: '#D9913A',
+          onAccent: '#262923',
+          border: '#E3E0D7',
           onPrimaryContainer: '#613b00',
           inversePrimary: '#855300',
           secondary: '#ffb77d',
