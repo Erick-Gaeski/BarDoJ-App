@@ -49,7 +49,7 @@
         --on-tertiary-fixed: 0 0% 0%;
         --on-tertiary-fixed-variant: 0 0% 0%;
         --background: 45 31% 95%;
-        --on-background: 147 13% 17%;
+        --on-background: #202521;
         --surface-variant: 0 0% 0%;
 
 
@@ -63,7 +63,7 @@
     --secondary: 45 100% 50%; /* âmbar */
     --secondary-foreground: 0 0% 10%; /* texto escuro */
     --muted: 30 50% 80%;   /* terracota leve */
-    --muted-foreground: 0 0% 30%;
+    --muted-foreground: #626b64;
     --accent: 45 100% 50%; /* âmbar */
     --accent-foreground: 0 0% 10%;
     --destructive: 0 84.2% 60.2%;
