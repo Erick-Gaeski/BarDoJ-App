@@ -19,9 +19,9 @@ export default {
           surfaceContainer: '#171f33',
           surfaceContainerHigh: '#222a3d',
           surfaceContainerHighest: '#2d3449',
-          onSurface: '#dae2fd',
+          onSurface: '#000000',
           onSurfaceVariant: '#d8c3ad',
-          inverseSurface: '#dae2fd',
+          inverseSurface: '#000000',
           inverseOnSurface: '#283044',
           outline: '#a08e7a',
           outlineVariant: '#534434',
@@ -62,7 +62,7 @@ export default {
           onTertiaryFixed: '#002113',
           onTertiaryFixedVariant: '#005236',
           background: '#F6F5F1',
-          onBackground: '#dae2fd',
+          onBackground: '#000000',
           surfaceVariant: '#FBFCFA',
         // removed duplicate
 
