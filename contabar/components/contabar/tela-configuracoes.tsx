@@ -46,6 +46,26 @@ export function TelaConfiguracoes() {
     executar((e) => alterarConfiguracoes(e, parcial));
   }
 
+  function baixarBackup() {
+    const backup = {
+      format: "contabar-demo-backup",
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      state: estado,
+    };
+    const blob = new Blob([JSON.stringify(backup, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `contabar-backup-${new Date().toISOString().replaceAll(":", "-")}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <Pagina
       titulo="Configurações"
@@ -100,9 +120,12 @@ export function TelaConfiguracoes() {
       <Card className="space-y-3 p-5">
         <h2 className="font-semibold">Dados de exemplo</h2>
         <p className="text-sm text-muted-foreground">
-          Tudo o que você vê hoje é fictício e fica salvo só neste navegador. Restaurar
-          apaga o que você mexeu e volta ao exemplo original.
+          O modo atual salva os dados só neste navegador; ele ainda não grava no
+          Supabase. Baixe uma cópia antes de restaurar ou trocar de navegador.
         </p>
+        <Button variant="outline" onClick={baixarBackup}>
+          Baixar backup deste navegador
+        </Button>
         <Button
           variant="outline"
           onClick={() => {

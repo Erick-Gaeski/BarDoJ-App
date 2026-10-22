@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
         colors: {
-          surface: '#0b1326',
+          surface: '#FFFFFF',
           surfaceDim: '#0b1326',
           surfaceBright: '#31394d',
           surfaceContainerLowest: '#060e20',
@@ -26,8 +26,8 @@ export default {
           outline: '#a08e7a',
           outlineVariant: '#534434',
           surfaceTint: '#ffb95f',
-          primary: '#ffc174',
-          onPrimary: '#472a00',
+          primary: '#245B4A',
+          onPrimary: '#FFFFFF',
           primaryContainer: '#f59e0b',
           onPrimaryContainer: '#613b00',
           inversePrimary: '#855300',
@@ -55,7 +55,7 @@ export default {
           tertiaryFixedDim: '#4edea3',
           onTertiaryFixed: '#002113',
           onTertiaryFixedVariant: '#005236',
-          background: '#0b1326',
+          background: '#F7F5EF',
           onBackground: '#dae2fd',
           surfaceVariant: '#2d3449',
         // removed duplicate
