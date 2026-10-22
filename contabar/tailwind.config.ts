@@ -26,7 +26,7 @@ export default {
           outline: '#a08e7a',
           outlineVariant: '#534434',
           surfaceTint: '#ffb95f',
-          primary: '#245B4A',
+          primary: '#225C49',
           onPrimary: '#FFFFFF',
           primaryContainer: '#f59e0b',
           // custom color tokens for new palette
@@ -45,7 +45,7 @@ export default {
           onTertiary: '#003824',
           tertiaryContainer: '#30c88f',
           onTertiaryContainer: '#004e34',
-          error: '#ffb4ab',
+          error: '#B42318',
           onError: '#690005',
           errorContainer: '#93000a',
           onErrorContainer: '#ffdad6',
@@ -61,9 +61,9 @@ export default {
           tertiaryFixedDim: '#4edea3',
           onTertiaryFixed: '#002113',
           onTertiaryFixedVariant: '#005236',
-          background: '#F7F5EF',
+          background: '#F6F5F1',
           onBackground: '#dae2fd',
-          surfaceVariant: '#2d3449',
+          surfaceVariant: '#FBFCFA',
         // removed duplicate
 
         },

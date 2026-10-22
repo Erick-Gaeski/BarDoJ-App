@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-        --background: 45 31% 95%;
+        --background: #F6F5F1;
         --surface: 0 0% 100%;
         --surface-dim: 0 0% 100%;
         --surface-bright: 0 0% 100%;
@@ -48,9 +48,9 @@
         --tertiary-fixed-dim: 38 61% 56%;
         --on-tertiary-fixed: 0 0% 0%;
         --on-tertiary-fixed-variant: 0 0% 0%;
-        --background: 45 31% 95%;
+        --background: #F6F5F1;
         --on-background: #202521;
-        --surface-variant: 0 0% 0%;
+        --surface-variant: #FBFCFA;
 
 
     --foreground: 0 0% 15%;   /* texto escuro */
@@ -58,7 +58,7 @@
     --card-foreground: 0 0% 15%;
     --popover: 40 98% 95%;
     --popover-foreground: 0 0% 15%;
-    --primary: 120 60% 20%;   /* verde escuro */
+    --primary: #225C49;   /* verde principal */
     --primary-foreground: 0 0% 90%; /* amarelão claro */
     --secondary: 45 100% 50%; /* âmbar */
     --secondary-foreground: 0 0% 10%; /* texto escuro */
