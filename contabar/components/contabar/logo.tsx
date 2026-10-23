@@ -10,7 +10,7 @@ export function LogoMarca({ className }: { className?: string }) {
       className={cn("h-8 w-8 shrink-0", className)}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="64" height="64" rx="14" fill="#D97706" />
+      <rect width="64" height="64" rx="14" fill="#173832" />
       <path d="M18 24h22v20a6 6 0 0 1-6 6H24a6 6 0 0 1-6-6V24z" fill="#FFF7ED" />
       <path
         d="M40 28h3a5 5 0 0 1 0 10h-3"
@@ -22,7 +22,7 @@ export function LogoMarca({ className }: { className?: string }) {
       <circle cx="23" cy="21" r="5" fill="#FFF7ED" />
       <circle cx="30" cy="18" r="6" fill="#FFF7ED" />
       <circle cx="36" cy="21" r="4.5" fill="#FFF7ED" />
-      <path d="M24 32h10M24 38h10" stroke="#D97706" strokeWidth="3" strokeLinecap="round" />
+      <path d="M24 32h10M24 38h10" stroke="#173832" strokeWidth="3" strokeLinecap="round" />
     </svg>
   );
 }

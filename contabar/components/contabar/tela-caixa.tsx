@@ -31,8 +31,10 @@ import { FORMAS, ROTULO_FORMA } from "@/lib/contabar/tipos";
 import { Campo, Etiqueta, Mensagem, Modal, Pagina, Selecao, Vazio } from "./ui";
 
 function ClasseDiferenca(diferenca: number) {
-  if (diferenca === 0) return "text-black dark:text-black";
-  return diferenca < 0 ? "text-black" : "text-black";
+  if (diferenca === 0) return "text-muted-foreground";
+  return diferenca < 0
+    ? "text-red-600 dark:text-red-400 font-bold"
+    : "text-emerald-600 dark:text-emerald-400 font-bold";
 }
 
 function TabelaFechamento({ linhas }: { linhas: FechamentoForma[] }) {

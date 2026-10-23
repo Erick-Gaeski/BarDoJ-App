@@ -59,21 +59,26 @@ export function CascaPainel({
 
   const navegacao = (aoClicar?: () => void) => (
     <nav className="grid gap-1" aria-label="Menu principal">
-      {links.map(({ href, rotulo, icone: Icone, exato }) => (
-        <Link
-          key={href}
-          href={href}
-          onClick={aoClicar}
-          aria-current={ativo(href, exato) ? "page" : undefined}
-          className={cn(
-            "flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-            ativo(href, exato) && "bg-accent text-accent-foreground",
-          )}
-        >
-          <Icone className="h-4 w-4" />
-          {rotulo}
-        </Link>
-      ))}
+      {links.map(({ href, rotulo, icone: Icone, exato }) => {
+        const isAtivo = ativo(href, exato);
+        return (
+          <Link
+            key={href}
+            href={href}
+            onClick={aoClicar}
+            aria-current={isAtivo ? "page" : undefined}
+            className={cn(
+              "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all",
+              isAtivo
+                ? "bg-primary text-primary-foreground font-semibold shadow-sm"
+                : "text-muted-foreground hover:bg-muted hover:text-foreground",
+            )}
+          >
+            <Icone className={cn("h-4 w-4", isAtivo ? "text-amber" : "text-muted-foreground")} />
+            {rotulo}
+          </Link>
+        );
+      })}
     </nav>
   );
 

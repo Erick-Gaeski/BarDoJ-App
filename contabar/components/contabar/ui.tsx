@@ -44,15 +44,23 @@ export function Estatistica({
   tom?: "normal" | "alerta" | "ok";
 }) {
   return (
-    <Card className="p-4">
-      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+    <Card
+      className={cn(
+        "relative overflow-hidden p-5 border-l-4 transition-all",
+        tom === "normal" && "border-l-primary",
+        tom === "alerta" && "border-l-amber-600 dark:border-l-amber-500",
+        tom === "ok" && "border-l-emerald-600 dark:border-l-emerald-500",
+      )}
+    >
+      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
         {titulo}
       </p>
       <p
         className={cn(
-          "mt-1 text-2xl font-bold",
-          tom === "alerta" && "text-black",
-          tom === "ok" && "text-emerald-600 dark:text-white",
+          "mt-1 text-2xl font-extrabold tracking-tight",
+          tom === "normal" && "text-foreground",
+          tom === "alerta" && "text-amber-700 dark:text-amber-400",
+          tom === "ok" && "text-emerald-700 dark:text-emerald-400",
         )}
       >
         {valor}
@@ -63,11 +71,11 @@ export function Estatistica({
 }
 
 const TONS_ETIQUETA = {
-  neutro: "bg-secondary text-secondary-foreground",
-  ok: "bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-white",
-  alerta: "bg-amber-100 text-black dark:bg-amber-950 dark:text-white",
-  perigo: "bg-red-100 text-red-900 dark:bg-red-950 dark:text-white",
-  info: "bg-sky-100 text-sky-900 dark:bg-sky-950 dark:text-white",
+  neutro: "bg-secondary text-secondary-foreground border border-border/60",
+  ok: "bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800",
+  alerta: "bg-amber-50 text-amber-900 border border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800",
+  perigo: "bg-red-50 text-red-900 border border-red-200 dark:bg-red-950/60 dark:text-red-300 dark:border-red-800",
+  info: "bg-sky-50 text-sky-900 border border-sky-200 dark:bg-sky-950/60 dark:text-sky-300 dark:border-sky-800",
 } as const;
 
 export function Etiqueta({
@@ -80,7 +88,7 @@ export function Etiqueta({
   return (
     <span
       className={cn(
-        "inline-flex items-center whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-semibold",
+        "inline-flex items-center whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold",
         TONS_ETIQUETA[tom],
       )}
     >
@@ -90,11 +98,11 @@ export function Etiqueta({
 }
 
 const TONS_MENSAGEM = {
-  info: "border-sky-300 bg-sky-50 text-sky-950 dark:border-sky-800 dark:bg-sky-950/40 dark:text-white",
+  info: "border-sky-200 bg-sky-50 text-sky-900 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-200",
   aviso:
-    "border-amber-300 bg-amber-50 text-black dark:border-amber-800 dark:bg-amber-950/40 dark:text-white",
-  erro: "border-red-300 bg-red-50 text-red-950 dark:border-red-800 dark:bg-red-950/40 dark:text-red-100",
-  ok: "border-emerald-300 bg-emerald-50 text-emerald-950 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-100",
+    "border-amber-200 bg-amber-50 text-amber-900 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
+  erro: "border-red-200 bg-red-50 text-red-900 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200",
+  ok: "border-emerald-200 bg-emerald-50 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200",
 } as const;
 
 export function Mensagem({
