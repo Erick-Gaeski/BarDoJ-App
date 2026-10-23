@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 /** Campo que o responsável precisa preencher antes de divulgar este documento. */
 function Preencher({ children }: { children: React.ReactNode }) {
   return (
-    <mark className="rounded bg-amber-200 px-1 font-medium text-amber-950 dark:bg-amber-900 dark:text-amber-100">
+    <mark className="rounded bg-amber-200 px-1 font-medium text-black dark:bg-amber-900 dark:text-black">
       [PREENCHER: {children}]
     </mark>
   );
@@ -53,7 +53,7 @@ export default function Privacidade() {
         </p>
         <div
           role="note"
-          className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100"
+          className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-black dark:border-amber-800 dark:bg-amber-950/40 dark:text-black"
         >
           <strong>Documento em preparação.</strong> Os campos destacados em amarelo
           precisam ser preenchidos pelo responsável pelo ContaBar, e o texto deve passar

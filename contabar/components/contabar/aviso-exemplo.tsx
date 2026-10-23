@@ -5,7 +5,7 @@ export function AvisoExemplo() {
   return (
     <div
       role="note"
-      className="flex flex-wrap items-start gap-x-2 gap-y-1 border-b border-amber-300 bg-amber-100 px-4 py-2 text-xs text-amber-950 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-100"
+      className="flex flex-wrap items-start gap-x-2 gap-y-1 border-b border-amber-300 bg-amber-100 px-4 py-2 text-xs text-black dark:border-amber-800 dark:bg-amber-950 dark:text-black"
     >
       <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0" />
       <p className="min-w-0 flex-1">
