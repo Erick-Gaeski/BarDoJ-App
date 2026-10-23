@@ -27,16 +27,16 @@ export default {
           outlineVariant: '#534434',
           surfaceTint: '#ffb95f',
           primary: {
-            DEFAULT: '#225C49',
+            DEFAULT: '#D9913A',
             foreground: '#FFFFFF',
           },
           onPrimary: '#FFFFFF',
-          primaryContainer: '#f59e0b',
+          primaryContainer: '#E6A860',
           // custom color tokens for new palette
-          foreground: '#262923',
-          secondary: '#5E665F',
+          foreground: '#000000',
+          secondary: '#E6A860',
           accent: '#D9913A',
-          onAccent: '#262923',
+          onAccent: '#FFFFFF',
           border: '#E3E0D7',
           onPrimaryContainer: '#613b00',
           inversePrimary: '#855300',
@@ -66,6 +66,8 @@ export default {
           onTertiaryFixedVariant: '#005236',
           background: '#F6F5F1',
           onBackground: '#000000',
+          button: '#D9913A',
+          buttonForeground: '#FFFFFF',
           surfaceVariant: '#FBFCFA',
         // removed duplicate
 
