@@ -26,7 +26,10 @@ export default {
           outline: '#a08e7a',
           outlineVariant: '#534434',
           surfaceTint: '#ffb95f',
-          primary: '#225C49',
+          primary: {
+            DEFAULT: '#225C49',
+            foreground: '#FFFFFF',
+          },
           onPrimary: '#FFFFFF',
           primaryContainer: '#f59e0b',
           // custom color tokens for new palette
