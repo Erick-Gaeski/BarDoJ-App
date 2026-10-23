@@ -52,7 +52,7 @@ export function Estatistica({
         className={cn(
           "mt-1 text-2xl font-bold",
           tom === "alerta" && "text-black",
-          tom === "ok" && "text-emerald-600 dark:text-emerald-400",
+          tom === "ok" && "text-emerald-600 dark:text-white",
         )}
       >
         {valor}
